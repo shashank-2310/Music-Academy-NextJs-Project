@@ -35,7 +35,7 @@ const FeaturedCourses = () => {
                                 <div
                                     className="p4 sm:p-6 flex flex-col items-center text-center flex-grow">
                                     <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">{course.title}</p>
-                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow">{course.description}</p>
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow w-11/12 sm:w-full">{course.description}</p>
                                     <Link
                                         href={`/courses/${course.slug}`}
                                         className="text-base px-3 py-1 mt-3 sm:mb-0 mb-3 text-neutral-600 bg-white hover:bg-gray-700 hover:text-white transition duration-200 rounded-xl"

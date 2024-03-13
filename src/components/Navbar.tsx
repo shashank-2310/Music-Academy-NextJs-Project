@@ -13,27 +13,30 @@ function Navbar({ className }: { className?: string }) {
         >
             <Menu setActive={setActive}>
                 <Link href={"/"}>
-                    <MenuItem setActive={setActive} active={active} item="Home">
-
-                    </MenuItem>
+                    <MenuItem setActive={setActive} active={active} item="Home" />
                 </Link>
-                <MenuItem
-                    setActive={setActive} active={active} item="Our Courses"
-                >
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/courses">All Courses</HoveredLink>
-                        <HoveredLink href="/courses">
-                            Basic Music Theory
-                        </HoveredLink>
-                        <HoveredLink href="/courses">
-                            Advanced Composition
-                        </HoveredLink>
-                        <HoveredLink href="/courses">Songwriting</HoveredLink>
-                        <HoveredLink href="/courses">
-                            Music Production
-                        </HoveredLink>
-                    </div>
-                </MenuItem>
+                <Link href={"/courses"} className="sm:hidden">
+                    <MenuItem setActive={setActive} active={active} item="Our Courses" />
+                </Link>
+                <div className="max-sm:hidden block">
+                    <MenuItem
+                        setActive={setActive} active={active} item="Our Courses"
+                    >
+                        <div className="sm:flex flex-col space-y-4 text-sm block">
+                            <HoveredLink href="/courses">All Courses</HoveredLink>
+                            <HoveredLink href="/courses">
+                                Basic Music Theory
+                            </HoveredLink>
+                            <HoveredLink href="/courses">
+                                Advanced Composition
+                            </HoveredLink>
+                            <HoveredLink href="/courses">Songwriting</HoveredLink>
+                            <HoveredLink href="/courses">
+                                Music Production
+                            </HoveredLink>
+                        </div>
+                    </MenuItem>
+                </div>
                 <Link href={"/contact"}>
                     <MenuItem setActive={setActive} active={active} item="Contact Us">
 
